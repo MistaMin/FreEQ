@@ -1,0 +1,4 @@
+.DS_Store
+openplugin-eq/target/
+juce-eq/build/
+juce-eq/build-9/

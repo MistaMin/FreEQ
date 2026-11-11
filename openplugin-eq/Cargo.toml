@@ -1,0 +1,19 @@
+[package]
+name = "openplugin-eq"
+version = "0.1.0"
+edition = "2021"
+description = "Four-band EQ benchmark plugin on OpenPlugin SDK"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+cpal = "0.15"
+goodlookindri-shell = { path = "../../Dependencies/GoodLookinDri/shell" }
+openplugin = { path = "../../Dependencies/OpenPluginSDK/crates/openplugin" }
+
+[[bin]]
+name = "openplugin-eq"
+path = "src/bin/window.rs"
+
+[[bin]]
+name = "openplugin-eq-cpu"
+path = "src/bin/cpu.rs"

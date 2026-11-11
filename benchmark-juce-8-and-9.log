@@ -1,0 +1,234 @@
+START Wed Nov 11 10:14:59 CET 2026
+=== openplugin single fft=off ===
+CPU plugin=openplugin case=mp_idle audio_sec=8.000 cpu_sec=0.014254 pct_realtime=0.1782 gross_cpu_sec=0.014325 copy_cpu_sec=0.000071 sink=-0.004008
+CPU plugin=openplugin case=mp_idle audio_sec=8.000 cpu_sec=0.014216 pct_realtime=0.1777 gross_cpu_sec=0.014289 copy_cpu_sec=0.000073 sink=-0.004008
+CPU plugin=openplugin case=mp_idle audio_sec=8.000 cpu_sec=0.014063 pct_realtime=0.1758 gross_cpu_sec=0.014109 copy_cpu_sec=0.000046 sink=-0.004008
+CPU plugin=openplugin case=mp_idle audio_sec=8.000 cpu_sec=0.013905 pct_realtime=0.1738 gross_cpu_sec=0.013951 copy_cpu_sec=0.000046 sink=-0.004008
+CPU plugin=openplugin case=mp_idle audio_sec=8.000 cpu_sec=0.013804 pct_realtime=0.1725 gross_cpu_sec=0.013848 copy_cpu_sec=0.000044 sink=-0.004008
+CPU plugin=openplugin case=mp_idle audio_sec=8.000 cpu_sec=0.013995 pct_realtime=0.1749 gross_cpu_sec=0.014040 copy_cpu_sec=0.000045 sink=-0.004008
+CPU plugin=openplugin dsp=mp load=idle fft=off median_pct_realtime=0.1749 latency=0
+CPU plugin=openplugin case=mp_one audio_sec=8.000 cpu_sec=0.013964 pct_realtime=0.1746 gross_cpu_sec=0.014029 copy_cpu_sec=0.000065 sink=-0.006050
+CPU plugin=openplugin case=mp_one audio_sec=8.000 cpu_sec=0.013735 pct_realtime=0.1717 gross_cpu_sec=0.013785 copy_cpu_sec=0.000050 sink=-0.006050
+CPU plugin=openplugin case=mp_one audio_sec=8.000 cpu_sec=0.014128 pct_realtime=0.1766 gross_cpu_sec=0.014198 copy_cpu_sec=0.000070 sink=-0.006050
+CPU plugin=openplugin case=mp_one audio_sec=8.000 cpu_sec=0.013972 pct_realtime=0.1746 gross_cpu_sec=0.014043 copy_cpu_sec=0.000071 sink=-0.006050
+CPU plugin=openplugin case=mp_one audio_sec=8.000 cpu_sec=0.014100 pct_realtime=0.1763 gross_cpu_sec=0.014181 copy_cpu_sec=0.000081 sink=-0.006050
+CPU plugin=openplugin case=mp_one audio_sec=8.000 cpu_sec=0.013794 pct_realtime=0.1724 gross_cpu_sec=0.013839 copy_cpu_sec=0.000045 sink=-0.006050
+CPU plugin=openplugin dsp=mp load=one fft=off median_pct_realtime=0.1746 latency=0
+CPU plugin=openplugin case=mp_full audio_sec=8.000 cpu_sec=0.014076 pct_realtime=0.1759 gross_cpu_sec=0.014123 copy_cpu_sec=0.000047 sink=-0.004403
+CPU plugin=openplugin case=mp_full audio_sec=8.000 cpu_sec=0.013894 pct_realtime=0.1737 gross_cpu_sec=0.013939 copy_cpu_sec=0.000045 sink=-0.004403
+CPU plugin=openplugin case=mp_full audio_sec=8.000 cpu_sec=0.014021 pct_realtime=0.1753 gross_cpu_sec=0.014085 copy_cpu_sec=0.000064 sink=-0.004403
+CPU plugin=openplugin case=mp_full audio_sec=8.000 cpu_sec=0.014455 pct_realtime=0.1807 gross_cpu_sec=0.014522 copy_cpu_sec=0.000067 sink=-0.004403
+CPU plugin=openplugin case=mp_full audio_sec=8.000 cpu_sec=0.014112 pct_realtime=0.1764 gross_cpu_sec=0.014158 copy_cpu_sec=0.000046 sink=-0.004403
+CPU plugin=openplugin case=mp_full audio_sec=8.000 cpu_sec=0.013970 pct_realtime=0.1746 gross_cpu_sec=0.014052 copy_cpu_sec=0.000082 sink=-0.004403
+CPU plugin=openplugin dsp=mp load=full fft=off median_pct_realtime=0.1753 latency=0
+CPU plugin=openplugin case=lp_idle audio_sec=8.000 cpu_sec=0.724439 pct_realtime=9.0555 gross_cpu_sec=0.724489 copy_cpu_sec=0.000050 sink=0.000153
+CPU plugin=openplugin case=lp_idle audio_sec=8.000 cpu_sec=0.732597 pct_realtime=9.1575 gross_cpu_sec=0.732645 copy_cpu_sec=0.000048 sink=0.000153
+CPU plugin=openplugin case=lp_idle audio_sec=8.000 cpu_sec=0.725907 pct_realtime=9.0738 gross_cpu_sec=0.725958 copy_cpu_sec=0.000051 sink=0.000153
+CPU plugin=openplugin case=lp_idle audio_sec=8.000 cpu_sec=0.723106 pct_realtime=9.0388 gross_cpu_sec=0.723166 copy_cpu_sec=0.000060 sink=0.000153
+CPU plugin=openplugin case=lp_idle audio_sec=8.000 cpu_sec=0.725418 pct_realtime=9.0677 gross_cpu_sec=0.725463 copy_cpu_sec=0.000045 sink=0.000153
+CPU plugin=openplugin case=lp_idle audio_sec=8.000 cpu_sec=0.723800 pct_realtime=9.0475 gross_cpu_sec=0.723890 copy_cpu_sec=0.000090 sink=0.000153
+CPU plugin=openplugin dsp=lp load=idle fft=off median_pct_realtime=9.0677 latency=512
+CPU plugin=openplugin case=lp_one audio_sec=8.000 cpu_sec=0.722110 pct_realtime=9.0264 gross_cpu_sec=0.722182 copy_cpu_sec=0.000072 sink=0.002516
+CPU plugin=openplugin case=lp_one audio_sec=8.000 cpu_sec=0.719945 pct_realtime=8.9993 gross_cpu_sec=0.720030 copy_cpu_sec=0.000085 sink=0.002516
+CPU plugin=openplugin case=lp_one audio_sec=8.000 cpu_sec=0.723002 pct_realtime=9.0375 gross_cpu_sec=0.723047 copy_cpu_sec=0.000045 sink=0.002516
+CPU plugin=openplugin case=lp_one audio_sec=8.000 cpu_sec=0.721407 pct_realtime=9.0176 gross_cpu_sec=0.721460 copy_cpu_sec=0.000053 sink=0.002516
+CPU plugin=openplugin case=lp_one audio_sec=8.000 cpu_sec=0.724268 pct_realtime=9.0534 gross_cpu_sec=0.724314 copy_cpu_sec=0.000046 sink=0.002516
+CPU plugin=openplugin case=lp_one audio_sec=8.000 cpu_sec=0.722597 pct_realtime=9.0325 gross_cpu_sec=0.722683 copy_cpu_sec=0.000086 sink=0.002516
+CPU plugin=openplugin dsp=lp load=one fft=off median_pct_realtime=9.0325 latency=512
+CPU plugin=openplugin case=lp_full audio_sec=8.000 cpu_sec=0.722734 pct_realtime=9.0342 gross_cpu_sec=0.722813 copy_cpu_sec=0.000079 sink=0.000486
+CPU plugin=openplugin case=lp_full audio_sec=8.000 cpu_sec=0.721694 pct_realtime=9.0212 gross_cpu_sec=0.721746 copy_cpu_sec=0.000052 sink=0.000486
+CPU plugin=openplugin case=lp_full audio_sec=8.000 cpu_sec=0.722410 pct_realtime=9.0301 gross_cpu_sec=0.722493 copy_cpu_sec=0.000083 sink=0.000486
+CPU plugin=openplugin case=lp_full audio_sec=8.000 cpu_sec=0.727780 pct_realtime=9.0973 gross_cpu_sec=0.727884 copy_cpu_sec=0.000104 sink=0.000486
+CPU plugin=openplugin case=lp_full audio_sec=8.000 cpu_sec=0.722418 pct_realtime=9.0302 gross_cpu_sec=0.722482 copy_cpu_sec=0.000064 sink=0.000486
+CPU plugin=openplugin case=lp_full audio_sec=8.000 cpu_sec=0.722009 pct_realtime=9.0251 gross_cpu_sec=0.722102 copy_cpu_sec=0.000093 sink=0.000486
+CPU plugin=openplugin dsp=lp load=full fft=off median_pct_realtime=9.0301 latency=512
+CPU plugin=openplugin case=zl_idle audio_sec=8.000 cpu_sec=0.721028 pct_realtime=9.0129 gross_cpu_sec=0.721100 copy_cpu_sec=0.000072 sink=-0.004305
+CPU plugin=openplugin case=zl_idle audio_sec=8.000 cpu_sec=0.723010 pct_realtime=9.0376 gross_cpu_sec=0.723056 copy_cpu_sec=0.000046 sink=-0.004305
+CPU plugin=openplugin case=zl_idle audio_sec=8.000 cpu_sec=0.725520 pct_realtime=9.0690 gross_cpu_sec=0.725599 copy_cpu_sec=0.000079 sink=-0.004305
+CPU plugin=openplugin case=zl_idle audio_sec=8.000 cpu_sec=0.727008 pct_realtime=9.0876 gross_cpu_sec=0.727095 copy_cpu_sec=0.000087 sink=-0.004305
+CPU plugin=openplugin case=zl_idle audio_sec=8.000 cpu_sec=0.722881 pct_realtime=9.0360 gross_cpu_sec=0.722927 copy_cpu_sec=0.000046 sink=-0.004305
+CPU plugin=openplugin case=zl_idle audio_sec=8.000 cpu_sec=0.724683 pct_realtime=9.0585 gross_cpu_sec=0.724808 copy_cpu_sec=0.000125 sink=-0.004305
+CPU plugin=openplugin dsp=zl load=idle fft=off median_pct_realtime=9.0585 latency=0
+CPU plugin=openplugin case=zl_one audio_sec=8.000 cpu_sec=0.723331 pct_realtime=9.0416 gross_cpu_sec=0.723437 copy_cpu_sec=0.000106 sink=-0.006375
+CPU plugin=openplugin case=zl_one audio_sec=8.000 cpu_sec=0.723547 pct_realtime=9.0443 gross_cpu_sec=0.723597 copy_cpu_sec=0.000050 sink=-0.006375
+CPU plugin=openplugin case=zl_one audio_sec=8.000 cpu_sec=0.731333 pct_realtime=9.1417 gross_cpu_sec=0.731407 copy_cpu_sec=0.000074 sink=-0.006375
+CPU plugin=openplugin case=zl_one audio_sec=8.000 cpu_sec=0.724990 pct_realtime=9.0624 gross_cpu_sec=0.725082 copy_cpu_sec=0.000092 sink=-0.006375
+CPU plugin=openplugin case=zl_one audio_sec=8.000 cpu_sec=0.722281 pct_realtime=9.0285 gross_cpu_sec=0.722330 copy_cpu_sec=0.000049 sink=-0.006375
+CPU plugin=openplugin case=zl_one audio_sec=8.000 cpu_sec=0.724507 pct_realtime=9.0563 gross_cpu_sec=0.724582 copy_cpu_sec=0.000075 sink=-0.006375
+CPU plugin=openplugin dsp=zl load=one fft=off median_pct_realtime=9.0563 latency=0
+CPU plugin=openplugin case=zl_full audio_sec=8.000 cpu_sec=0.724029 pct_realtime=9.0504 gross_cpu_sec=0.724072 copy_cpu_sec=0.000043 sink=-0.004546
+CPU plugin=openplugin case=zl_full audio_sec=8.000 cpu_sec=0.724081 pct_realtime=9.0510 gross_cpu_sec=0.724153 copy_cpu_sec=0.000072 sink=-0.004546
+CPU plugin=openplugin case=zl_full audio_sec=8.000 cpu_sec=0.722926 pct_realtime=9.0366 gross_cpu_sec=0.722998 copy_cpu_sec=0.000072 sink=-0.004546
+CPU plugin=openplugin case=zl_full audio_sec=8.000 cpu_sec=0.726299 pct_realtime=9.0787 gross_cpu_sec=0.726390 copy_cpu_sec=0.000091 sink=-0.004546
+CPU plugin=openplugin case=zl_full audio_sec=8.000 cpu_sec=0.722340 pct_realtime=9.0293 gross_cpu_sec=0.722384 copy_cpu_sec=0.000044 sink=-0.004546
+CPU plugin=openplugin case=zl_full audio_sec=8.000 cpu_sec=0.722353 pct_realtime=9.0294 gross_cpu_sec=0.722457 copy_cpu_sec=0.000104 sink=-0.004546
+CPU plugin=openplugin dsp=zl load=full fft=off median_pct_realtime=9.0366 latency=0
+=== juce 8.0.17-security single fft=off ===
+PROBE case=highpass low=-27.9415 high=-0.00807699
+PROBE case=lowpass pass=-0.00139357 cut=-37.7973
+PROBE case=peak level_db=12.0035
+PROBE case=highshelf air=5.96663 body=0.0126115
+PROBE case=band_ends at20=11.85 at20k=12.0008
+PROBE case=linear level_db=5.99864 latency=512
+PROBE case=analog_zl level_db=6.02693 latency=0
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.01854 pct_realtime=0.23175 sink=-0.00459155
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.018426 pct_realtime=0.230325 sink=-0.00459155
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.018553 pct_realtime=0.231912 sink=-0.00459155
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.018614 pct_realtime=0.232675 sink=-0.00459155
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.018553 pct_realtime=0.231912 sink=-0.00459155
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.018375 pct_realtime=0.229687 sink=-0.00459155
+CPU plugin=juce dsp=mp load=idle fft=off median_pct_realtime=0.231912 latency=0
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018695 pct_realtime=0.233687 sink=-0.00668308
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018509 pct_realtime=0.231363 sink=-0.00668308
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018886 pct_realtime=0.236075 sink=-0.00668308
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018503 pct_realtime=0.231288 sink=-0.00668308
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.019003 pct_realtime=0.237537 sink=-0.00668308
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018685 pct_realtime=0.233563 sink=-0.00668308
+CPU plugin=juce dsp=mp load=one fft=off median_pct_realtime=0.233563 latency=0
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018568 pct_realtime=0.2321 sink=-0.00449323
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018447 pct_realtime=0.230588 sink=-0.00449323
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018861 pct_realtime=0.235762 sink=-0.00449323
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018445 pct_realtime=0.230562 sink=-0.00449323
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018538 pct_realtime=0.231725 sink=-0.00449323
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018557 pct_realtime=0.231963 sink=-0.00449323
+CPU plugin=juce dsp=mp load=full fft=off median_pct_realtime=0.231725 latency=0
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.7429 pct_realtime=9.28625 sink=0.000140579
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.742362 pct_realtime=9.27953 sink=0.000140579
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.742798 pct_realtime=9.28498 sink=0.000140579
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.74217 pct_realtime=9.27712 sink=0.000140579
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.742178 pct_realtime=9.27722 sink=0.000140579
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.741757 pct_realtime=9.27196 sink=0.000140579
+CPU plugin=juce dsp=lp load=idle fft=off median_pct_realtime=9.27722 latency=512
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.744693 pct_realtime=9.30866 sink=0.00249654
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.741879 pct_realtime=9.27349 sink=0.00249654
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.742523 pct_realtime=9.28154 sink=0.00249654
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.748636 pct_realtime=9.35795 sink=0.00249654
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.744195 pct_realtime=9.30244 sink=0.00249654
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.741454 pct_realtime=9.26818 sink=0.00249654
+CPU plugin=juce dsp=lp load=one fft=off median_pct_realtime=9.28154 latency=512
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.743298 pct_realtime=9.29123 sink=0.000490637
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.741147 pct_realtime=9.26434 sink=0.000490637
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.741599 pct_realtime=9.26999 sink=0.000490637
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.742371 pct_realtime=9.27964 sink=0.000490637
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.74358 pct_realtime=9.29475 sink=0.000490637
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.743086 pct_realtime=9.28857 sink=0.000490637
+CPU plugin=juce dsp=lp load=full fft=off median_pct_realtime=9.27964 latency=512
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.744856 pct_realtime=9.3107 sink=-0.00434753
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.74231 pct_realtime=9.27887 sink=-0.00434753
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.74154 pct_realtime=9.26925 sink=-0.00434753
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.742118 pct_realtime=9.27647 sink=-0.00434753
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.741539 pct_realtime=9.26924 sink=-0.00434753
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.741918 pct_realtime=9.27398 sink=-0.00434753
+CPU plugin=juce dsp=zl load=idle fft=off median_pct_realtime=9.27398 latency=0
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.741644 pct_realtime=9.27055 sink=-0.00636545
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.74248 pct_realtime=9.281 sink=-0.00636545
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.743227 pct_realtime=9.29034 sink=-0.00636545
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.741692 pct_realtime=9.27115 sink=-0.00636545
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.740931 pct_realtime=9.26164 sink=-0.00636545
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.739927 pct_realtime=9.24909 sink=-0.00636545
+CPU plugin=juce dsp=zl load=one fft=off median_pct_realtime=9.27115 latency=0
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.740887 pct_realtime=9.26109 sink=-0.00453618
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.741247 pct_realtime=9.26559 sink=-0.00453618
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.746596 pct_realtime=9.33245 sink=-0.00453618
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.757547 pct_realtime=9.46934 sink=-0.00453618
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.742179 pct_realtime=9.27724 sink=-0.00453618
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.743481 pct_realtime=9.29351 sink=-0.00453618
+CPU plugin=juce dsp=zl load=full fft=off median_pct_realtime=9.29351 latency=0
+=== juce 9.0.5 single fft=off ===
+PROBE case=highpass low=-27.9415 high=-0.00807699
+PROBE case=lowpass pass=-0.00139357 cut=-37.7973
+PROBE case=peak level_db=12.0035
+PROBE case=highshelf air=5.96663 body=0.0126115
+PROBE case=band_ends at20=11.85 at20k=12.0008
+PROBE case=linear level_db=5.99864 latency=512
+PROBE case=analog_zl level_db=6.02693 latency=0
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.018303 pct_realtime=0.228787 sink=-0.00459155
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.01825 pct_realtime=0.228125 sink=-0.00459155
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.01829 pct_realtime=0.228625 sink=-0.00459155
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.018287 pct_realtime=0.228588 sink=-0.00459155
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.018147 pct_realtime=0.226838 sink=-0.00459155
+CPU plugin=juce case=mp_idle audio_sec=8 cpu_sec=0.018236 pct_realtime=0.22795 sink=-0.00459155
+CPU plugin=juce dsp=mp load=idle fft=off median_pct_realtime=0.228125 latency=0
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018261 pct_realtime=0.228263 sink=-0.00668308
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018661 pct_realtime=0.233262 sink=-0.00668308
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018366 pct_realtime=0.229575 sink=-0.00668308
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018779 pct_realtime=0.234738 sink=-0.00668308
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018198 pct_realtime=0.227475 sink=-0.00668308
+CPU plugin=juce case=mp_one audio_sec=8 cpu_sec=0.018238 pct_realtime=0.227975 sink=-0.00668308
+CPU plugin=juce dsp=mp load=one fft=off median_pct_realtime=0.229575 latency=0
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018187 pct_realtime=0.227338 sink=-0.00449323
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018287 pct_realtime=0.228588 sink=-0.00449323
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018204 pct_realtime=0.22755 sink=-0.00449323
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018302 pct_realtime=0.228775 sink=-0.00449323
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018132 pct_realtime=0.22665 sink=-0.00449323
+CPU plugin=juce case=mp_full audio_sec=8 cpu_sec=0.018256 pct_realtime=0.2282 sink=-0.00449323
+CPU plugin=juce dsp=mp load=full fft=off median_pct_realtime=0.2282 latency=0
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.744565 pct_realtime=9.30706 sink=0.000140579
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.741731 pct_realtime=9.27164 sink=0.000140579
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.74236 pct_realtime=9.2795 sink=0.000140579
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.741931 pct_realtime=9.27414 sink=0.000140579
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.744907 pct_realtime=9.31134 sink=0.000140579
+CPU plugin=juce case=lp_idle audio_sec=8 cpu_sec=0.743365 pct_realtime=9.29206 sink=0.000140579
+CPU plugin=juce dsp=lp load=idle fft=off median_pct_realtime=9.2795 latency=512
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.744172 pct_realtime=9.30215 sink=0.00249654
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.743481 pct_realtime=9.29351 sink=0.00249654
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.74089 pct_realtime=9.26113 sink=0.00249654
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.741639 pct_realtime=9.27049 sink=0.00249654
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.741524 pct_realtime=9.26905 sink=0.00249654
+CPU plugin=juce case=lp_one audio_sec=8 cpu_sec=0.740951 pct_realtime=9.26189 sink=0.00249654
+CPU plugin=juce dsp=lp load=one fft=off median_pct_realtime=9.26905 latency=512
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.741903 pct_realtime=9.27379 sink=0.000490637
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.742366 pct_realtime=9.27957 sink=0.000490637
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.744331 pct_realtime=9.30414 sink=0.000490637
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.743003 pct_realtime=9.28754 sink=0.000490637
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.741649 pct_realtime=9.27061 sink=0.000490637
+CPU plugin=juce case=lp_full audio_sec=8 cpu_sec=0.742248 pct_realtime=9.2781 sink=0.000490637
+CPU plugin=juce dsp=lp load=full fft=off median_pct_realtime=9.27957 latency=512
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.741671 pct_realtime=9.27089 sink=-0.00434753
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.741681 pct_realtime=9.27101 sink=-0.00434753
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.741698 pct_realtime=9.27122 sink=-0.00434753
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.743667 pct_realtime=9.29584 sink=-0.00434753
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.74198 pct_realtime=9.27475 sink=-0.00434753
+CPU plugin=juce case=zl_idle audio_sec=8 cpu_sec=0.742881 pct_realtime=9.28601 sink=-0.00434753
+CPU plugin=juce dsp=zl load=idle fft=off median_pct_realtime=9.27475 latency=0
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.743336 pct_realtime=9.2917 sink=-0.00636545
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.741374 pct_realtime=9.26718 sink=-0.00636545
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.742348 pct_realtime=9.27935 sink=-0.00636545
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.75714 pct_realtime=9.46425 sink=-0.00636545
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.753955 pct_realtime=9.42444 sink=-0.00636545
+CPU plugin=juce case=zl_one audio_sec=8 cpu_sec=0.742837 pct_realtime=9.28546 sink=-0.00636545
+CPU plugin=juce dsp=zl load=one fft=off median_pct_realtime=9.28546 latency=0
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.741524 pct_realtime=9.26905 sink=-0.00453618
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.741412 pct_realtime=9.26765 sink=-0.00453618
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.741683 pct_realtime=9.27104 sink=-0.00453618
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.740544 pct_realtime=9.2568 sink=-0.00453618
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.740315 pct_realtime=9.25394 sink=-0.00453618
+CPU plugin=juce case=zl_full audio_sec=8 cpu_sec=0.744558 pct_realtime=9.30697 sink=-0.00453618
+CPU plugin=juce dsp=zl load=full fft=off median_pct_realtime=9.26765 latency=0
+=== openplugin 100 fft=off ===
+CPU plugin=openplugin instances=100 dsp=mp load=full fft=off median_pct_realtime=17.51 latency=0
+CPU plugin=openplugin instances=100 dsp=lp load=full fft=off median_pct_realtime=905.88 latency=512
+CPU plugin=openplugin instances=100 dsp=zl load=full fft=off median_pct_realtime=890.74 latency=0
+=== juce 8.0.17-security 100 fft=off ===
+PROBE case=highpass low=-27.9415 high=-0.00807699
+PROBE case=lowpass pass=-0.00139357 cut=-37.7973
+PROBE case=peak level_db=12.0035
+PROBE case=highshelf air=5.96663 body=0.0126115
+PROBE case=band_ends at20=11.85 at20k=12.0008
+PROBE case=linear level_db=5.99864 latency=512
+PROBE case=analog_zl level_db=6.02693 latency=0
+CPU plugin=juce instances=100 dsp=mp load=full fft=off median_pct_realtime=24.6175 latency=0
+CPU plugin=juce instances=100 dsp=lp load=full fft=off median_pct_realtime=937.415 latency=512
+CPU plugin=juce instances=100 dsp=zl load=full fft=off median_pct_realtime=943.65 latency=0
+=== juce 9.0.5 100 fft=off ===
+PROBE case=highpass low=-27.9415 high=-0.00807699
+PROBE case=lowpass pass=-0.00139357 cut=-37.7973
+PROBE case=peak level_db=12.0035
+PROBE case=highshelf air=5.96663 body=0.0126115
+PROBE case=band_ends at20=11.85 at20k=12.0008
+PROBE case=linear level_db=5.99864 latency=512
+PROBE case=analog_zl level_db=6.02693 latency=0
+CPU plugin=juce instances=100 dsp=mp load=full fft=off median_pct_realtime=24.1146 latency=0
+CPU plugin=juce instances=100 dsp=lp load=full fft=off median_pct_realtime=927.273 latency=512
+CPU plugin=juce instances=100 dsp=zl load=full fft=off median_pct_realtime=908.784 latency=0
+END Wed Nov 11 10:54:01 CET 2026
