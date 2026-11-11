@@ -2,7 +2,7 @@
 
 ## Summary
 
-FreEQ is one six-band equaliser built twice. The Rust realisation is in [MistaMin/FreEQ](https://github.com/MistaMin/FreEQ) and links this SDK. Its face and spectrum are GoodLookin DRI (`goodlookindri` draws, `goodlookindri-shell` opens the window). The C++ comparison was built with JUCE 8.0.17-security and JUCE 9.0.5. That C++ tree is not in the FreEQ repository. The long impulses are played by [`BlockConvolver`](CONVOLVE.md).
+FreEQ is one six-band equaliser built twice. The Rust realisation is in [MistaMin/FreEQ](https://github.com/MistaMin/FreEQ) and links this SDK. Its face and spectrum are GoodLookin DRI (`goodlookindri` draws, `goodlookindri-shell` opens the window). The C++ comparison was built with JUCE 8.0.17-security and JUCE 9.0.5. That C++ tree is not in the FreEQ repository. The long impulses are played by [`BlockConvolver`](https://github.com/MistaMin/OpenPluginSDK/blob/main/docs/CONVOLVE.md).
 
 This page is the measurement record: the filters, the test, the numbers after that convolver, and the playback code.
 
@@ -74,7 +74,7 @@ JUCE remained ahead on the long filters because its transform is vectorised. On 
 
 ## The SDK convolver
 
-The library contract is [CONVOLVE.md](CONVOLVE.md). `BlockConvolver` in `crates/openplugin-dsp/src/convolve.rs` plans a 2048-point forward transform and its inverse with `rustfft`, stores the spectrum of an impulse of at most 1024 taps, and keeps one history per channel. `new` and `set_kernel` allocate. `process` does not. The inverse is divided by 2048, because `rustfft` leaves that scale to the caller.
+The library contract is [CONVOLVE.md](https://github.com/MistaMin/OpenPluginSDK/blob/main/docs/CONVOLVE.md). `BlockConvolver` in `crates/openplugin-dsp/src/convolve.rs` plans a 2048-point forward transform and its inverse with `rustfft`, stores the spectrum of an impulse of at most 1024 taps, and keeps one history per channel. `new` and `set_kernel` allocate. `process` does not. The inverse is divided by 2048, because `rustfft` leaves that scale to the caller.
 
 A test in the same file runs the convolver and a direct 1024-tap walk on one impulse and one input, in uneven block sizes, and requires the outputs to agree within 0.0002.
 
