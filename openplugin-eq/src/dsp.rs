@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Marcos Quirino Deida
 //! Six series bands, each a peak, pass, or shelf. Minimum phase is the biquad
 //! path. Linear phase is a symmetric FIR of that magnitude. Analog ZL designs
 //! the same sections at 16× and renders a causal kernel with no latency.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Marcos Quirino Deida
 //! Graph editor: FFT behind the EQ curve, a node for every band, a card per band with its
 //! filter shape drawn as a symbol, and input and output meters beside the plot.
 //!

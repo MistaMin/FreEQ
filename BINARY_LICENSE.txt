@@ -1,0 +1,44 @@
+FreEQ Binary Freeware License
+Copyright (c) 2026 Marcos Quirino Deida
+
+Scope
+This license applies to the official compiled FreEQ plug-ins, standalone
+application, and installers distributed by Marcos Quirino Deida.
+FreEQ source code is separately available under the MIT License (LICENSE).
+
+Permission to use
+You may download, install, and use the official binaries free of charge,
+for personal or commercial purposes, including professional audio production.
+The official binaries are distributed as proprietary freeware, not under an
+open-source license. Freeware describes their price and permission to use;
+it does not place the complete binaries in the public domain or grant the
+MIT source license over third-party code incorporated into them.
+
+Third-party components
+The VST3 format is built with the Steinberg VST3 SDK and the Audio Unit format
+with Apple's AudioUnitSDK. The AAX binary is built using Avid's AAX SDK and
+digitally signed using PACE Eden credentials under the OpenGrid Avid AAX
+Developer Agreement. End users do not need a Steinberg, Apple, Avid, or PACE
+developer license to install or use these binaries. The publisher's Avid
+signing credentials are not transferred to anyone building or distributing
+their own versions from source.
+FreEQ's MIT-licensed source, the OpenPlugin SDK, GoodLookin DRI, and the Rust
+crates FreEQ links retain their respective open-source licenses. See
+THIRD_PARTY_LICENSES.md and the license texts in the Licenses/third-party
+folder (installed with the binaries). These freeware terms do not restrict
+rights granted by those component licenses. No license to the Avid AAX SDK is
+granted by this document.
+
+Warranty
+THE BINARIES ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE AND NONINFRINGEMENT. TO THE EXTENT PERMITTED BY APPLICABLE LAW,
+THE COPYRIGHT HOLDER IS NOT LIABLE FOR CLAIMS, DAMAGES OR OTHER LIABILITY
+ARISING FROM THE BINARIES OR THEIR USE.
+
+Trademarks
+AAX and Pro Tools are trademarks of Avid Technology, Inc. VST is a trademark of
+Steinberg Media Technologies GmbH. Audio Units is a trademark of Apple Inc.
+FreEQ is an independent project: those companies are not affiliated with, and
+have not endorsed or sponsored, Marcos Quirino Deida, the OpenGrid Project or
+this plug-in.

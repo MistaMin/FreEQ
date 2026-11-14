@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Marcos Quirino Deida
 //! Six bands. Each band is a peak, a high pass, a low pass, a low shelf, or a high shelf.
 
 use openplugin::prelude::*;

@@ -1,4 +1,6 @@
-//! Four-band EQ on OpenPlugin SDK. DSP is `dsp`, the plugin trait is `plugin`, the
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Marcos Quirino Deida
+//! Six-band EQ on OpenPlugin SDK. DSP is `dsp`, the plugin trait is `plugin`, the
 //! GoodLookin DRI editor is `editor`.
 
 pub mod dsp;

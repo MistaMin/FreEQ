@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Marcos Quirino Deida
 //! OpenPlugin trait adapter. Audio-thread `process` only calls `EqDsp::process_sample`.
 
 use openplugin::prelude::*;

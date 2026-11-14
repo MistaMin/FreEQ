@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Marcos Quirino Deida
 //! Dump the GoodLookin scene so it can be rasterized.
 
 use openplugin::dri::DrawCmd;

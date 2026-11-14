@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Marcos Quirino Deida
 //! CPU time of the shipped OpenPlugin EQ process path. Release build only.
 
 use openplugin::prelude::Plugin;

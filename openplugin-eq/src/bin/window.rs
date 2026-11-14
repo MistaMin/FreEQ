@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Marcos Quirino Deida
 //! Standalone window for the OpenPlugin EQ.
 //!
 //! The picture is a GoodLookin scene. The shell opens the Cocoa window and sends the mouse.
