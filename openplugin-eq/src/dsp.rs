@@ -13,6 +13,58 @@ const MAX_CHANNELS: usize = 8;
 const FIR_LEN: usize = 1024;
 pub const SPECTRUM_BINS: usize = 64;
 
+/// Bottom of the level meters, in dBFS.
+pub const METER_FLOOR_DB: f32 = -80.0;
+/// How fast a meter bar falls once the signal drops, in dB per second.
+pub const METER_FALL_DB_PER_S: f32 = 20.0;
+/// How long the peak marker stays put before it falls.
+pub const METER_HOLD_S: f32 = 1.5;
+
+/// One channel of a peak meter. The bar jumps to a new peak at once and falls at
+/// [`METER_FALL_DB_PER_S`]. The hold marker waits [`METER_HOLD_S`], then falls at the same rate.
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub struct MeterReading {
+    pub level_db: f32,
+    pub hold_db: f32,
+}
+
+impl MeterReading {
+    const SILENT: Self = Self { level_db: METER_FLOOR_DB, hold_db: METER_FLOOR_DB };
+}
+
+#[derive(Debug, Clone, Copy)]
+struct Meter {
+    reading: MeterReading,
+    hold_left: f32,
+}
+
+impl Meter {
+    const fn new() -> Self {
+        Self { reading: MeterReading::SILENT, hold_left: 0.0 }
+    }
+
+    /// `peak` is the largest absolute sample of a block that lasted `seconds`.
+    fn push(&mut self, peak: f32, seconds: f32) {
+        let db = if peak < 1.0e-4 { METER_FLOOR_DB } else { (20.0 * peak.log10()).max(METER_FLOOR_DB) };
+        let fall = METER_FALL_DB_PER_S * seconds;
+        self.reading.level_db = db.max(self.reading.level_db - fall);
+        if db >= self.reading.hold_db {
+            self.reading.hold_db = db;
+            self.hold_left = METER_HOLD_S;
+        } else if self.hold_left > 1.0e-4 {
+            // The epsilon absorbs f32 rounding in the countdown. Without it the marker waited
+            // one extra block: 1.52 s instead of 1.51 s at 480-sample blocks.
+            self.hold_left -= seconds;
+        } else {
+            self.reading.hold_db = (self.reading.hold_db - fall).max(self.reading.level_db);
+        }
+    }
+}
+
+fn block_peak(samples: &[f32]) -> f32 {
+    samples.iter().fold(0.0f32, |peak, sample| peak.max(sample.abs()))
+}
+
 #[derive(Debug, Clone)]
 struct Channel {
     bands: [Biquad; BANDS],
@@ -42,7 +94,8 @@ pub struct EqDsp {
     /// Neon overlap-save from the SDK. Replaces the scalar 2048-point complex transform.
     convolver: BlockConvolver,
     spectrum: [f32; SPECTRUM_BINS],
-    meter: [f32; 2],
+    input_meter: [Meter; 2],
+    output_meter: [Meter; 2],
     channels: Vec<Channel>,
 }
 
@@ -56,7 +109,8 @@ impl EqDsp {
             fir: identity_fir(),
             convolver: BlockConvolver::new(1),
             spectrum: [-100.0; SPECTRUM_BINS],
-            meter: [-80.0; 2],
+            input_meter: [Meter::new(); 2],
+            output_meter: [Meter::new(); 2],
             channels: Vec::new(),
         };
         dsp.apply_coeffs();
@@ -76,7 +130,8 @@ impl EqDsp {
             channel.reset();
         }
         self.convolver.reset();
-        self.meter = [-80.0; 2];
+        self.input_meter = [Meter::new(); 2];
+        self.output_meter = [Meter::new(); 2];
     }
 
     pub fn latency(&self) -> usize {
@@ -91,8 +146,19 @@ impl EqDsp {
         self.sample_rate
     }
 
+    /// Output level of the left and right channel, after trim.
     pub fn output_db(&self) -> [f32; 2] {
-        self.meter
+        [self.output_meter[0].reading.level_db, self.output_meter[1].reading.level_db]
+    }
+
+    /// Left and right input meters, taken before the first band.
+    pub fn input_meter(&self) -> [MeterReading; 2] {
+        [self.input_meter[0].reading, self.input_meter[1].reading]
+    }
+
+    /// Left and right output meters, taken after trim.
+    pub fn output_meter(&self) -> [MeterReading; 2] {
+        [self.output_meter[0].reading, self.output_meter[1].reading]
     }
 
     pub fn set_params(&mut self, values: &[f32; PARAM_COUNT]) {
@@ -121,10 +187,14 @@ impl EqDsp {
     }
 
     /// In-place block. FIR modes use one 2048-point overlap-save per chunk of at most 1024 samples.
-    /// Minimum phase skips a peak whose gain is 0 dB, and updates the meter once per block.
+    /// Minimum phase skips a peak whose gain is 0 dB. Both meters update once per block.
     pub fn process_channel(&mut self, channel: usize, samples: &mut [f32]) {
         if self.channels.get(channel).is_none() || samples.is_empty() {
             return;
+        }
+        let seconds = samples.len() as f32 / self.sample_rate;
+        if channel < 2 {
+            self.input_meter[channel].push(block_peak(samples), seconds);
         }
         if self.phase_mode == 0 {
             self.process_minimum(channel, samples);
@@ -154,7 +224,7 @@ impl EqDsp {
             peak = peak.max(y.abs());
             *sample = y;
         }
-        self.push_meter(channel, peak);
+        self.push_output(channel, peak, samples.len());
     }
 
     fn process_fir(&mut self, channel: usize, samples: &mut [f32]) {
@@ -165,19 +235,13 @@ impl EqDsp {
             *sample *= trim;
             peak = peak.max(sample.abs());
         }
-        self.push_meter(channel, peak);
+        self.push_output(channel, peak, samples.len());
     }
 
-    fn push_meter(&mut self, channel: usize, peak: f32) {
-        if channel >= 2 {
-            return;
+    fn push_output(&mut self, channel: usize, peak: f32, frames: usize) {
+        if channel < 2 {
+            self.output_meter[channel].push(peak, frames as f32 / self.sample_rate);
         }
-        let db = if peak < 1.0e-8 { -80.0 } else { 20.0 * peak.log10() };
-        self.meter[channel] = if db > self.meter[channel] {
-            db
-        } else {
-            self.meter[channel] * 0.9995 + db * 0.0005
-        };
     }
 
     fn prepare_kernel(&mut self) {

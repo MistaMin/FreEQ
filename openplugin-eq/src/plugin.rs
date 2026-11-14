@@ -6,12 +6,12 @@ use crate::dsp::EqDsp;
 use crate::params::{PARAM_COUNT, PARAMS};
 
 static INFO: PluginInfo = PluginInfo {
-    id: "com.mistamin.eqbenchmark.openplugin",
-    name: "EQ Benchmark OpenPlugin",
+    id: "https://github.com/MistaMin/FreEQ",
+    name: "FreEQ",
     vendor: "MistaMin",
-    url: "https://github.com/MistaMin/OpenPluginSDK",
+    url: "https://github.com/MistaMin/FreEQ",
     email: "contact@mistamin.com",
-    version: "0.1.0",
+    version: "0.2.0",
     category: Category::Eq,
     params: &PARAMS,
     is_instrument: false,
@@ -52,6 +52,16 @@ impl EqPlugin {
 
     pub fn output_db(&self) -> [f32; 2] {
         self.dsp.output_db()
+    }
+
+    /// Left and right input meters, before the first band.
+    pub fn input_meter(&self) -> [crate::dsp::MeterReading; 2] {
+        self.dsp.input_meter()
+    }
+
+    /// Left and right output meters, after trim.
+    pub fn output_meter(&self) -> [crate::dsp::MeterReading; 2] {
+        self.dsp.output_meter()
     }
 
     pub fn sample_rate(&self) -> f32 {

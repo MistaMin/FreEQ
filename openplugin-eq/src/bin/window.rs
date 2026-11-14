@@ -2,7 +2,8 @@
 //!
 //! The picture is a GoodLookin scene. The shell opens the Cocoa window and sends the mouse.
 //! The spectrum is `goodlookindri::spectrum`: the audio callback only pushes `SampleRing`,
-//! and the UI thread runs the FFT.
+//! and the UI thread runs the FFT. A click on empty plot freezes the spectrum, the next
+//! click turns it off, and the one after that brings it back.
 //!
 //! `openplugin-eq --smoke` draws for a moment and exits 0 when the frame is not blank.
 
@@ -13,9 +14,8 @@ use cpal::{SampleFormat, SampleRate, Stream};
 use goodlookindri_shell::{render_offscreen, run, App, Config, Event};
 use openplugin::dri::goodlookindri::scene::Scene;
 use openplugin::dri::goodlookindri::spectrum::SampleRing;
-use openplugin::dri::goodlookindri::spectrum_draw::SpectrumView;
 use openplugin::prelude::Plugin;
-use openplugin_eq::{paint, pointer_down, pointer_drag, spectrum_view, EqPlugin, Gesture};
+use openplugin_eq::{paint, pointer_down, pointer_drag, spectrum_view, EqPlugin, Gesture, Spectrum};
 
 const WIDTH: f32 = 980.0;
 const HEIGHT: f32 = 640.0;
@@ -61,7 +61,7 @@ impl Engine {
 struct Face {
     engine: Arc<Mutex<Engine>>,
     ring: Arc<SampleRing>,
-    spectrum: SpectrumView,
+    spectrum: Spectrum,
     gesture: Gesture,
     dragging: bool,
     size: (f32, f32),
@@ -92,6 +92,10 @@ impl App for Face {
                 let (width, height) = self.size;
                 let mut engine = self.engine.lock().unwrap_or_else(|error| error.into_inner());
                 self.dragging = pointer_down(&mut engine.plugin, width, height, x, y, &mut self.gesture);
+                // Empty plot: live, then frozen, then off.
+                if self.gesture.on_plot() {
+                    self.spectrum.next_mode();
+                }
                 true
             }
             Event::MouseMove { x, y } => {

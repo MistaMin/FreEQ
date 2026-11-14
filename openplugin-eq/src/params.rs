@@ -56,11 +56,12 @@ pub static PARAMS: [ParamInfo; PARAM_COUNT] = [
     ParamInfo::new("trim", "Trim", -24.0, 24.0, 0.0, Unit::Db),
 ];
 
+/// One hue per band, low band to high band, picked to read on the dark plot.
 pub const BAND_COLOR: [(f32, f32, f32); BANDS] = [
-    (0.91, 0.55, 0.48),
-    (0.93, 0.82, 0.28),
-    (0.28, 0.66, 0.38),
-    (0.28, 0.58, 0.82),
-    (0.58, 0.36, 0.72),
-    (0.82, 0.36, 0.58),
+    (1.00, 0.42, 0.42),
+    (1.00, 0.66, 0.30),
+    (1.00, 0.83, 0.23),
+    (0.41, 0.86, 0.49),
+    (0.30, 0.67, 0.97),
+    (0.69, 0.59, 0.99),
 ];

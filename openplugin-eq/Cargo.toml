@@ -1,14 +1,18 @@
 [package]
 name = "openplugin-eq"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
-description = "Four-band EQ benchmark plugin on OpenPlugin SDK"
+description = "FreEQ: six-band equaliser on OpenPlugin SDK"
 license = "MIT OR Apache-2.0"
+
+[lib]
+crate-type = ["lib", "cdylib", "staticlib"]
 
 [dependencies]
 cpal = "0.15"
 goodlookindri-shell = { path = "../../Dependencies/GoodLookinDri/shell" }
 openplugin = { path = "../../Dependencies/OpenPluginSDK/crates/openplugin" }
+openplugin-targets = { path = "../../Dependencies/OpenPluginSDK/crates/openplugin-targets" }
 
 [[bin]]
 name = "openplugin-eq"

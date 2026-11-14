@@ -4,8 +4,9 @@ use openplugin::prelude::Plugin;
 use openplugin_eq::{pointer_down, EqPlugin, Gesture};
 
 fn select_phase(plugin: &mut EqPlugin, mode: usize) {
-    let x = 786.0 + mode as f32 * 64.0 + 28.0;
-    let y = 444.0;
+    // Centre of the phase button: they start at 780, sit 58 apart, and are 52 by 32 from y 536.
+    let x = 780.0 + mode as f32 * 58.0 + 26.0;
+    let y = 552.0;
     let mut gesture = Gesture::default();
     assert!(pointer_down(plugin, 980.0, 640.0, x, y, &mut gesture), "phase button {mode}");
     let value = plugin.param("phase").unwrap();

@@ -6,6 +6,34 @@ FreEQ is one six-band equaliser built twice. The Rust realisation is in [MistaMi
 
 This page is the measurement record: the filters, the test, the numbers after that convolver, and the playback code.
 
+## FreEQ 0.2.0
+
+What changed since 0.1.0:
+
+- A dark editor with one colour per band.
+- Each band's filter type is drawn as a symbol on a button. A click steps to the next type: peak, high pass, low pass, low shelf, high shelf. Peaks and shelves flip when the band cuts.
+- Stereo input and output meters with peak hold. The input meter reads before the first band, and the output meter reads after trim. A bar jumps to a new peak at once and falls at 20 dB per second. The hold marker waits 1.5 seconds, then falls at the same rate.
+- A click on empty plot steps the spectrum: live, frozen, off, live. Off costs no FFT.
+- AAX is now built and PACE-signed, next to VST3, AU, CLAP, LV2 and the standalone app.
+
+What did not change, and where 0.2.0 has limits:
+
+- **The FreEQ editor is in the standalone app only.** The VST3, AU, AAX, CLAP and LV2 builds show the host's own parameter controls. The shells do not host the GoodLookin editor yet.
+- **LV2 has audio ports only.** The LV2 build exposes none of the 26 parameters to a host.
+- **State.** In REAPER, the VST3 build did not restore Bands 1 to 5 after save and reopen, and the CLAP build restored most band values to their defaults. AU restores all of them.
+- **AAX Validator.** Five of six tests pass. `test.page_table.load` fails because the shell has no page table. The AAX has had no Pro Tools session.
+- The input meter adds one pass over each block, so the 0.2.0 figures below are slightly higher than the 0.1.0 figures.
+
+One equaliser, percent of realtime, OpenPlugin only, measured on 14 November 2026 on a busy machine (load average 18 to 24; the clock is processor time, not wall time):
+
+| DSP | idle | one band | full | 0.1.0 figure (idle, one band, full) |
+| --- | ---: | ---: | ---: | --- |
+| Minimum | 0.014 | 0.080 | 0.118 | 0.012, 0.070, 0.111 |
+| Linear | 0.170 | 0.170 | 0.170 | 0.160 |
+| Analog ZL | 0.171 | 0.169 | 0.171 | 0.160 |
+
+The one hundred equaliser figures and the JUCE columns in the tables further down are from 0.1.0 and were not measured again.
+
 ![OpenPlugin FreEQ](freeq/openplugin.png)
 
 *OpenPlugin. Minimum phase is selected. The coloured fill is a 4096-point spectrum of the signal leaving the equaliser.*
